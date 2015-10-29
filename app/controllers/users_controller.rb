@@ -17,6 +17,11 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+		if params[:search]
+			@users = User.serach(params[:search]).order("created_at DESC")
+		else
+			@users = User.all.order('created_at DESC')
+		end
 	end
 
 	def show
@@ -38,14 +43,14 @@ class UsersController < ApplicationController
 		redirect_to users_path
 	end
 #need to fix this.
-	def search
-	end
+	# def search
+	# end
 
-	def searchresults
-		@query = params[:fname]
-    	# TODO need to use ILIKE in Postgres, where strings are case sensitive
-    	@users = User.where("fname LIKE ?", "%#{params[:fname]}%")
-	end
+	# def searchresults
+	# 	@query = params[:username]
+ #    	# TODO need to use ILIKE in Postgres, where strings are case sensitive
+ #    	@users = User.where("username LIKE ?", "%#{params[:username]}%")
+	# end
 	private
 
 	def user_params

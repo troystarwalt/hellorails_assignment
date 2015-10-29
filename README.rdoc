@@ -5,7 +5,7 @@ User
 [x] - See account info
 [x] - Delete Account
 [x] - View other users
-[] - Search other users
+[x] - Search other users
 [x] - Edit User
 
 Post

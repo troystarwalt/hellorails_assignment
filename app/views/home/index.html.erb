@@ -1,2 +1,13 @@
-index.html.erb
+
 <h1>Welcome</h1>
+
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:serach], placeholder: "Search Users" %>
+<%= submit_tag "Search"%>
+<% end %>
+
+<% if @users.present? %>
+  <%= render @users %>
+<% else %>
+  <p>There are no users containing the letter(s) <%= params[:search] %>.</p>
+<% end %>
