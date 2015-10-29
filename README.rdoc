@@ -1,0 +1,19 @@
+[x] - Create Home Index
+
+User
+[x] - User Sign Up
+[x] - See account info
+[x] - Delete Account
+[x] - View other users
+[] - Search other users
+[x] - Edit User
+
+Post
+[] - View Posts
+[] - Ceate Posts
+[] - Edit Posts
+[] - Delete Posts
+
+Session
+[] - Login
+[] - Logout

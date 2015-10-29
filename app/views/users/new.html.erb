@@ -1,0 +1,20 @@
+<h1>Sign Up </h1>
+
+<h2>Sign up</h2>
+<div class="user_forms">
+<%= form_for @user do |f| %>
+<p>
+	<%= f.label :username %>
+	<%= f.text_field :username, class: "input_area" %>
+</p>
+<p>
+	<%= f.label :email %>
+	<%= f.text_field :email, class: "input_area" %>
+</p>
+<p>
+	<%= f.label :password %>
+	<%= f.password_field :password, class: "input_area" %>
+</p>
+<%= f.submit "Create Account", class: "submit_btn" %>
+<% end %>
+</div>

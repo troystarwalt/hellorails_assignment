@@ -1,0 +1,21 @@
+
+<% if @user %>
+<p>
+	You are logged in! Hi <%= @user.username %>
+</p>
+<p>Username: <%= @user.username %></p>
+
+<p>
+	<%= link_to "Delete Account", user_path(@user.id), method: :delete %>
+	<%= link_to "Edit Account", edit_user_path(@user.id) %>
+</p>
+<% else %>
+<p>
+	Sorry I don't know who you are. Please <%= link_to "login", sessions_new_path %>.
+</p>
+<% end %>
+
+
+
+
+
